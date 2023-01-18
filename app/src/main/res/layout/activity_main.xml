@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    >
+    <!-- input area -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL : "
+            android:layout_margin="3dp"
+            />
+        <EditText
+            android:id="@+id/urlEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="주소를 입력하세요."
+            android:inputType="textUri"
+            android:layout_margin="3dp"
+            />
+    </LinearLayout>
+    <!-- button area -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/getButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET"
+            android:layout_margin="3dp"
+            android:backgroundTint="#de5246"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cookie clear"
+            android:id="@+id/cookieClear"
+            android:layout_margin="3dp"
+            android:buttonTint="#de5246"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POST"
+            android:layout_margin="3dp"
+            android:backgroundTint="#4285F4"
+            />
+        <EditText
+            android:id="@+id/postKey"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="key"
+            android:inputType="text"
+            android:layout_margin="3dp"
+            />
+        <EditText
+            android:id="@+id/postValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="value"
+            android:inputType="text"
+            android:layout_margin="3dp"
+            />
+    </LinearLayout>
+
+    <!-- webview / loading -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/wView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</LinearLayout>
